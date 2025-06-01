@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F8FF; /* Soft pastel blue background */
+    color: #333;
+}
+
+/* Header and Navbar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #E6E6FA; /* Lavender (Pastel Violet) */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A90E2; /* Pastel blue */
+    animation: fadeIn 1s ease-out;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #4A90E2; /* Pastel blue */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #9B59B6; /* Pastel violet */
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #4A90E2;
+    margin: 5px 0;
+}
+
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #FFF; /* White */
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.section h2 {
+    font-size: 30px;
+    color: #4A90E2; /* Pastel blue */
+}
+
+.section p,
+.section ul {
+    font-size: 18px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #9B59B6; /* Pastel violet */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #E6E6FA; /* Lavender (Pastel Violet) */
+}
+
+.footer p {
+    color: #4A90E2; /* Pastel blue */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #FFF;
+        padding: 20px;
+    }
+
+    .navbar ul.active {
+        display: block;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+}
